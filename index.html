@@ -2,16 +2,16 @@
 <html lang="cs">
 <head>
 <meta charset="utf-8">
-<!-- EdgePilot — vlastní obal pro plochu iPadu / iPhonu (29.10.2026). Jen tmavý horní okraj (stavový pruh) + vložený deník z Google Apps Scriptu.
+<!-- KomiTrade — vlastní obal pro plochu iPadu / iPhonu (29.10.2026). Jen tmavý horní okraj (stavový pruh) + vložený deník z Google Apps Scriptu.
      Žádná data, žádný klíč: adresu webové aplikace s klíčem vloží Pavel jednou v zařízení (localStorage tohoto obalu). -->
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="theme-color" content="#121A27">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<meta name="apple-mobile-web-app-title" content="EdgePilot">
+<meta name="apple-mobile-web-app-title" content="KomiTrade">
 <meta name="referrer" content="no-referrer">
-<title>EdgePilot</title>
+<title>KomiTrade</title>
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="apple-touch-icon" href="icon-180.png">
 <link rel="icon" href="icon.svg" type="image/svg+xml">
@@ -29,7 +29,7 @@
 </head>
 <body>
 <div id="setup">
-  <h1>EdgePilot</h1>
+  <h1>KomiTrade</h1>
   <p>Vlož jednou adresu deníku pro iPad (…/exec?view=ipad&amp;key=…). Uloží se jen v tomto zařízení. Změna později: podrž prst vlevo nahoře na stavovém pruhu.</p>
   <textarea id="u" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="https://script.google.com/macros/s/…/exec?view=ipad&amp;key=…"></textarea>
   <button id="save" type="button">Uložit a otevřít</button>
@@ -51,7 +51,7 @@
   function open(u) {
     document.getElementById('setup').style.display = 'none';
     var f = document.getElementById('app');
-    if (!f) { f = document.createElement('iframe'); f.id = 'app'; f.title = 'EdgePilot'; f.setAttribute('allow', 'clipboard-read; clipboard-write'); document.body.appendChild(f); }
+    if (!f) { f = document.createElement('iframe'); f.id = 'app'; f.title = 'KomiTrade'; f.setAttribute('allow', 'clipboard-read; clipboard-write'); document.body.appendChild(f); }
     f.src = u;
   }
   function setup(msg) {
